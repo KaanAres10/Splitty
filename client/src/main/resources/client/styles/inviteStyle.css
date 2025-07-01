@@ -1,0 +1,18 @@
+.invite-button {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+}
+.invite-button:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+}
+.cancel-button {
+    -fx-background-color: #f44336; /* Red */
+    -fx-text-fill: white;
+}
+.warning-text {
+    -fx-fill: #da0606;
+}
+.invite-code {
+    -fx-text-fill: #000000;
+}
+

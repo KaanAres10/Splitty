@@ -1,0 +1,112 @@
+.root {
+    -fx-font-family: 'Arial';
+}
+
+.label {
+    -fx-text-fill: #333;
+    -fx-font-size: 24px;
+}
+
+.text-field {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+}
+
+.list-view {
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+}
+
+.list-cell {
+    -fx-padding: 10px;
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border: none;
+    -fx-cursor: hand;
+}
+
+.link-button:hover {
+    -fx-background-color: grey;
+}
+
+.link-button .graphic {
+    -fx-fit-to-height: true;
+    -fx-preserve-ratio: true;
+    -fx-max-height: 16px;
+}
+
+.remove-button {
+    -fx-background-radius: 15;
+    -fx-background-color: #ff4444;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+    -fx-padding: 5px;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+}
+
+.remove-button:hover {
+    -fx-background-color: #ff0000;
+}
+
+.no-header .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.display-none {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.debt-resolve-button {
+    -fx-background-color: #5cb85c;
+}
+
+.debt-resolve-button:hover {
+    -fx-background-color: #4cae4c;
+}
+
+.debt-unresolve-button {
+    -fx-background-color: #d02c2c;
+}
+
+.debt-unresolve-button:hover {
+    -fx-background-color: #bd2828;
+}
+
+/* Ensure that the list cell graphic (HBox) fills the width of the list view */
+.list-cell:filled:selected, .list-cell:filled:selected, .list-cell:filled {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.settings-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border: none;
+    -fx-cursor: hand;
+}
+
+.settings-button:hover {
+    -fx-background-color: lightgrey;
+    -fx-padding: 0;
+    -fx-border: none;
+    -fx-cursor: hand;
+}
+
+.list-cell:hover {
+    -fx-background-color: #f9f9f9;
+}
+

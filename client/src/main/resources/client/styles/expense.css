@@ -1,0 +1,4 @@
+.small-button {
+    -fx-font-size: 10px; /* Adjust the font size */
+    -fx-padding: 4px 8px; /* Adjust the padding */
+}

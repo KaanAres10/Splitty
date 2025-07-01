@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CurrentParticipantsCtrl">
+   <children>
+      <Button fx:id="backButton" layoutX="490.0" layoutY="18.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="25.0" prefWidth="60.0" text="Back" />
+      <Button fx:id="addButton" layoutX="490.0" layoutY="365.0" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="25.0" prefWidth="60.0" text="Add" />
+      <StackPane alignment="CENTER_LEFT" layoutX="50.0" prefHeight="43.0" prefWidth="310.0">
+         <children>
+            <Label fx:id="eventNameLabel" prefHeight="55.0" prefWidth="283.0" text="Event Title">
+               <font>
+                  <Font name="Adelle Sans Devanagari Semibold" size="34.0" />
+               </font>
+            </Label>
+         </children></StackPane>
+      <TableView fx:id="tableParticipants" layoutX="50.0" layoutY="56.0" prefHeight="300.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="tableNameColumn" prefWidth="75.0" text="Name">
+              <cellValueFactory>
+                  <PropertyValueFactory property="name" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="tableEmailColumn" prefWidth="104.0" text="Email">
+              <cellValueFactory>
+                  <PropertyValueFactory property="mail" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="tableIbanColumn" prefWidth="96.0" text="IBAN">
+                <cellValueFactory>
+                    <PropertyValueFactory property="iban" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableBicColumn" prefWidth="92.0" text="BIC">
+                <cellValueFactory>
+                    <PropertyValueFactory property="bic" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label fx:id="noLabel" layoutX="150.0" layoutY="180.0" text="No Participants">
+         <font>
+            <Font name="Adelle Sans Devanagari Bold" size="40.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

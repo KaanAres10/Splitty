@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+
+
+<PieChart fx:id="pieChart" title="Total Cost of Event" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@/client/styles/StatisticStyle.css" fx:controller="client.scenes.StatisticCtrl" />

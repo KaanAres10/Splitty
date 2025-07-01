@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+            fx:controller="client.scenes.SettingsCtrl">
+    <children>
+        <Label fx:id="settings" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="385.0" text="Settings">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="usernameBox" layoutX="120.0" layoutY="112.0"/>
+        <TextField fx:id="serverBox" layoutX="335.0" layoutY="112.0" promptText="Current Server"/>
+        <ComboBox fx:id="languageBox" layoutX="119.0" layoutY="174.0" onAction="#switchLanguage" prefWidth="150.0"/>
+        <Label fx:id="username" layoutX="118.0" layoutY="94.0" text="Username:"/>
+        <Label fx:id="server" layoutX="335.0" layoutY="94.0" text="Server:"/>
+        <Label fx:id="language" layoutX="120.0" layoutY="156.0" text="Language:"/>
+        <Button fx:id="overviewReturn" layoutX="14.0" layoutY="361.0" mnemonicParsing="false"
+                onAction="#handleReturnToOverviewButtonAction" text="Return to Overview"/>
+        <Label fx:id="newLanguage" layoutX="334.0" layoutY="156.0" text="Suggest new Language:"/>
+        <TextField fx:id="newLanguageTitle" layoutX="334.0" layoutY="174.0" promptText="Language Title"/>
+        <TextArea fx:id="newLanguageText" layoutX="335.0" layoutY="200.0" prefHeight="155.0" prefWidth="149.0"
+                  promptText="Language Text"/>
+        <Button fx:id="adminButton" layoutX="118.0" layoutY="229.0" mnemonicParsing="false" onAction="#openAdmin"
+                text="Log In As Admin"/>
+        <Button fx:id="connectButton" layoutX="484.0" layoutY="112.0" mnemonicParsing="false" text="Connect"
+                onAction="#handleConnectButtonAction"/>
+        <Button fx:id="sendButton" layoutX="484.0" layoutY="329.0" mnemonicParsing="false" text="Send"/>
+    </children>
+</AnchorPane>

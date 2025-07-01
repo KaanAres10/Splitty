@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="728.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.EventOverviewCtrl">
+    <children>
+        <Label fx:id="eventTitle" layoutX="65.0" layoutY="50.0" style="-fx-background-color: white;" text="Event title">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Button id="sendInvite" fx:id="sendInvite" layoutX="376.0" layoutY="48.0" mnemonicParsing="false" onAction="#sendInvite" prefHeight="35.0" prefWidth="131.0" text="Send Invites">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Button id="showStatistics" fx:id="showStatisticsBtn" layoutX="531.0" layoutY="48.0" mnemonicParsing="false" onAction="#showStatistics" prefHeight="19.0" prefWidth="131.0" text="Show Statistics">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Label id="participants" fx:id="participantLabel" layoutX="65.0" layoutY="130.0" text="Participants">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Button id="addEdit" fx:id="participantAdd" layoutX="170.0" layoutY="130.0" mnemonicParsing="false" onAction="#editParticipants" prefHeight="26.0" text="Edit/Add" />
+        <Label fx:id="participants" layoutX="65.0" layoutY="163.0" text="List of all participants">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label id="expenseLabel" fx:id="expenseLabel" layoutX="486.0" layoutY="130.0" text="Show expenses of:">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="participantsList" layoutX="486.0" layoutY="163.0" prefWidth="150.0" />
+        <Button fx:id="addExpense" layoutX="534.0" layoutY="244.0" mnemonicParsing="false" onAction="#addExpense" prefHeight="26.0" prefWidth="136.0" text="Add Expense" />
+
+
+        <GridPane alignment="CENTER" hgap="3.0" layoutX="57.0" layoutY="242.0" prefHeight="30.0" prefWidth="340.0">
+
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.00001220703125" minWidth="10.0" prefWidth="46.99998779296875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.80001220703124" minWidth="0.0" prefWidth="136.79996337890626" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.20003662109372" minWidth="10.0" prefWidth="151.20003662109372" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button id="all" fx:id="allTable" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAllExpensesClicked" prefHeight="26.0" prefWidth="59.0" text="All" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+
+                <Button fx:id="fromPersonBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showExpensesFromParticipant" prefHeight="26.0" prefWidth="125.0" text="From " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Button fx:id="includingPersonBtn" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showExpensesIncludingParticipant" prefHeight="26.0" prefWidth="156.0" text="Including " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            </children>
+        </GridPane>
+        <Button id="settleDebts" fx:id="settleDebts" layoutX="556.0" layoutY="515.0" mnemonicParsing="false" onAction="#settleDebts" text="Settle Debts">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Button id="settleDebts" fx:id="backBtn" layoutX="65.0" layoutY="515.0" mnemonicParsing="false" onAction="#backBtn" text="Back">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <TableView fx:id="expenseTable" layoutX="57.0" layoutY="272.0" prefHeight="208.0" prefWidth="613.0">
+            <columns>
+                <TableColumn fx:id="dateColumn" prefWidth="83.2000732421875" text="Date" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="133.0" text="Description" />
+                <TableColumn fx:id="participantsColumn" prefWidth="216.0" text="Participants" />
+                <TableColumn fx:id="tagsColumn" prefWidth="85.0" text="Tags" />
+                <TableColumn fx:id="editColumn" minWidth="0.0" prefWidth="48.0" text="Edit" />
+                <TableColumn fx:id="deleteColumn" prefWidth="45.0" text="Delete" />
+            </columns>
+        </TableView>
+      <TextField fx:id="changeTitleField" layoutX="65.0" layoutY="84.0" prefHeight="25.0" prefWidth="81.0" />
+      <Button fx:id="changeTitleBtn" layoutX="154.0" layoutY="84.0" mnemonicParsing="false" onAction="#changeTitle" text="Change title" />
+    </children>
+</Pane>

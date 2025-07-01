@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ContactDetailsCtrl">
+    <children>
+      <Button fx:id="goBackButton" layoutX="448.0" layoutY="360.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="26.0" prefWidth="56.0" text="Cancel" />
+        <Button fx:id="okButton" layoutX="535.0" layoutY="360.0" mnemonicParsing="false" onAction="#okButtonPressed" prefHeight="26.0" prefWidth="51.0" text="Ok" />
+        <Label fx:id="contactTitle" layoutX="196.0" layoutY="80.0" text="Contact Details">
+            <font>
+                <Font name="Adelle Sans Devanagari Semibold" size="25.0" />
+            </font>
+        </Label>
+        <HBox layoutX="130.0" layoutY="130.0" prefHeight="156.0" prefWidth="302.0" spacing="5.0">
+            <children>
+                <VBox prefHeight="161.0" prefWidth="55.0">
+                    <children>
+                        <Label fx:id="nameLabel" text="Name">
+                            <font>
+                                <Font name="Adelle Sans Devanagari Semibold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="emailLabel" text="Email">
+                            <font>
+                                <Font name="Adelle Sans Devanagari Semibold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="ibanLabel" text="IBAN">
+                            <font>
+                                <Font name="Adelle Sans Devanagari Semibold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="bicLabel" text="BIC">
+                            <font>
+                                <Font name="Adelle Sans Devanagari Semibold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="156.0" prefWidth="243.0" spacing="13.0">
+                    <children>
+                        <TextField fx:id="nameTextField" promptText="Participant's name" />
+                        <TextField fx:id="emailTextField" promptText="Participant's email" />
+                        <TextField fx:id="ibanTextField" promptText="Participant's IBAN" />
+                        <TextField fx:id="bicTextField" promptText="Participant's BIC" />
+                    </children>
+                    <padding>
+                        <Insets left="10.0" top="8.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </HBox>
+      <Label fx:id="errorLabel" alignment="TOP_CENTER" layoutX="178.0" layoutY="301.0" prefHeight="85.0" prefWidth="270.0" text="Such name already exists" textFill="RED" />
+    </children>
+</Pane>
