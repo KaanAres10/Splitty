@@ -1,6 +1,6 @@
 # Splitty
 ## Description
-Splitty is an application which purpose is to facilitate financial organization in a group of people. This is basically achieved by creating an event and adding participants to it. Every participant is able to create an expense and add participants that owe him money. Also every participant can send invite code for the event, mark debts settled, see all expenses in the event etc. Every user is able to set up its own application by choosing between some common languages and choosing server.
+Splitty is a collaborative expense management application designed to simplify financial organization within groups. Users can create events, invite participants, and log shared expenses. Each participant can assign who owes what, mark debts as settled, view the full expense history, and share event access via invite codes. The application supports multi-language options and allows users to configure their own server settings for a personalized experience.
 ##  Setup
 1. Clone the repository
 > run `git clone https://github.com/Aduomas/splitty/` in the app directory
@@ -15,7 +15,6 @@ Splitty is an application which purpose is to facilitate financial organization 
 > run `./gradlew run` in the app directory
 
 ## Config
-
 - The application uses `user.json` file to store the data for the current user. If you want ot create a new user just delete the file and start the app again.
 - `config.properties` file contains language and current server, if current server IP is not reachable, the app will not launch.
 - `h2-database` files contain the database - delete it before launching a new server if you want to reset database.
