@@ -1,4 +1,3 @@
-# Splitty
 ## Description
 Splitty is a collaborative expense management application designed to simplify financial organization within groups. Users can create events, invite participants, and log shared expenses. Each participant can assign who owes what, mark debts as settled, view the full expense history, and share event access via invite codes. The application supports multi-language options and allows users to configure their own server settings for a personalized experience.
 ##  Setup
